@@ -1,7 +1,9 @@
+package model;
+
 public class ElectricMeter {
     private String code;
     private int oldElectricNumber;
-    private int newElectricNumber;
+    private int newElectricNumber = 0;
 
     public ElectricMeter() {
     }
@@ -39,8 +41,6 @@ public class ElectricMeter {
     public String toString() {
         return "ElectricMeter{" +
                 "code='" + code + '\'' +
-                ", oldElectricNumber=" + oldElectricNumber +
-                ", newElectricNumber=" + newElectricNumber +
-                '}';
+                ", oldElectricNumber=" + oldElectricNumber;
     }
 }
