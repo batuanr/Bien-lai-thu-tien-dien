@@ -65,7 +65,7 @@ public class Main {
                     editClient();
                     break;
                 case 4:
-                    electricalCompany.addReceipt(getNewReceipt());
+                    getAddReceipt();
                     break;
                 case 5:
                     electricalCompany.showAllElectricMeter();
@@ -84,6 +84,14 @@ public class Main {
             }
         }
 
+    }
+
+    private static void getAddReceipt() throws Exception {
+        try {
+            electricalCompany.addReceipt(getNewReceipt());
+        }catch (Exception e ){
+            System.err.println("lỗi rồi");
+        }
     }
 
     private static void showReceipt() {
