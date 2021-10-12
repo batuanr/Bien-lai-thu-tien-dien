@@ -42,7 +42,6 @@ public class Main {
 
         while (true){
             int choice;
-            Scanner s = new Scanner(System.in);
             Scanner n = new Scanner(System.in);
             System.out.println("Nhập 1: Nhập thông tin khách hàng mới");
             System.out.println("Nhập 2: Thêm đồng hồ điện mới");
@@ -77,9 +76,7 @@ public class Main {
                     getInfoClient();
                     break;
                 case 8:
-                    for (Receipt receipt1: electricalCompany.getReceiptList()){
-                        System.out.println(receipt1);
-                    }
+                    showReceipt();
                     break;
                 case 0: return;
                 default:
@@ -87,6 +84,12 @@ public class Main {
             }
         }
 
+    }
+
+    private static void showReceipt() {
+        for (Receipt receipt1: electricalCompany.getReceiptList()){
+            System.out.println(receipt1);
+        }
     }
 
     private static void editClient() {
